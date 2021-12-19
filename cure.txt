@@ -1,0 +1,71 @@
+for making a new project >>
+0. cd requires path 
+1. django-admin 
+2. django-admin startproject <'project name '>
+3. python manage.py runserver 
+4. if modulenotfound error comes , meas you have make mistake while making the folder  
+5. if want to make app >> just type >> django-admin startapp <'app_name'>
+6. why 404 error in my static.txt>> 
+ == just see the syntax of load static and syntax should >> {% load static %} == like this 
+
+if yu can't see the about page or anything >> just look to your views.py, urls.py and syntax ..
+if httprespose is there > don't need to reuest in retur . otherwise error occurs
+
+
+Read the models documentation .. asap ..
+see the models field reference >> search itt.
+
+to create an admin panel >>
+
+python manage.py createsuperuser
+
+if some error comes while migrating the it >>
+don't save the changes >> 
+1.firstly close the srver and then save it ..
+2. then write python manage.py makemigrations 
+3. then write pyhotn manage.py migrate 
+4. after then only start the server .
+error gones ..
+
+IMPORTANT 
+we can also add the products directly from the the code ..
+1. python manage.py shell 
+and wirte accordingly ..
+
+
+model.wrapper like wrap the text in a trasparent black screen ....   IMP 
+
+
+event.preventDefault(); = use to sav ehe page to get reaload while doing the tracking ..
+
+excercise : show prize in shop 
+
+                            BLOG  - STARTED 
+1. Errors :
+a) if error in page showing > then just try to simplify html page in basic.html and then go for index and respected page .
+eg. check the meata tags are correct or not , jQuery , body else tags specify it .
+
+2. in running betn migrations if some error is coming like module not found or some else ;then just again save by makung some small change in models.py  then   again run makemigrations and then migrate ..
+then start runserver.. 
+
+3. we just change the patth of MEDIA_URL = '/media/'  to  MEDIA_URL = '/static/'  
+
+3. IMP IMP : if you want to render all objects from admin to the index or else pages > then just target it by id ,,
+eg : TRY THIS :     post = Blogpost.objects.filter(post_id =  id)[0]
+                    print(post)
+                    return render(request, "blog/blogpost.html", {'post':post})
+eg    DON'T TRY THIS : post = Blogpost.objects.all()
+                       params={'post':post}
+                       return render(request, "blog/blogpost.html", params)
+or afterwards try this ..
+
+4. if you have to show the items add into the page > .objects.all()
+#  just write the previous link info and give link to it . 
+
+###################### if you want to print the same line after the line : just press  ctrl  + c and ctrl + v on the same position ,
+###################### don't move your cursor a single penny out of it .
+
+** How to reset your suoer user password :
+  1. python manage.py changepassword  Vedant (username required )
+  2. New superuser can be create 
+  3. python manage.py createsuperuser 

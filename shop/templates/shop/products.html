@@ -1,0 +1,10 @@
+<body>
+    
+    <h3> Products List </h3>
+        <p> {% for i in products %}</p>
+
+        <p><br>{{ i.product_name }}<br></p>
+        <p>{{ i.price }}</p>
+
+        {% endfor %}
+</body>

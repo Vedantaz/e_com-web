@@ -1,0 +1,71 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact Us - My Awesome Cart{% endblock %}
+<style>
+  .container{
+    max-width: 1051px;
+    background-color: aqua;
+  }
+</style>
+{% block body %}
+<div class="container" >
+  <form action="/shop/contact/" method="post" class="form-group my-3"
+    style="background-color: black; color:blanchedalmond"> {% csrf_token %}
+   
+      <div class="col-md-6">
+        <label for="Name" class="form-label">Name</label>
+        <input type="Name" class="form-control" id="name" name='name'>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" name='Email'>
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" name='password'>
+      </div>
+      <div class="col-md-6">
+        <label for="number" class="form-label">Phone-Number</label>
+        <input type="tel" class="form-control" id="number" name='Number'>
+      </div>
+    
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name='Address'>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+        name="Address 2">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" name='city'>
+    </div>
+    <div class="col-md-4 my-3">
+      <label for="inputState" class="form-label">State</label>
+      <input type="text" placeholder="Enter State">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" name='Zip'>
+    </div>
+    <div class="col-12" style="padding-top: 10px;">
+     
+    </div>
+    <div class="col-12" style="padding-top: 10px;">
+      <button type="submit" class="btn btn-primary my-3">Sign in</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
+{% block js%}
+<script>
+{% if thank %}
+alert('Thanks for ordering with us. Hop you are Safe and Go ahead with Else ');
+
+document.location = "/shop/contact";
+{% endif %}
+</script>
+{% endblock %}
